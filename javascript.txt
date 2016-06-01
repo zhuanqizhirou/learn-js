@@ -1,0 +1,82 @@
+var arr = ['A', '', 'B', null, undefined, 'C', '  '];
+var r = arr.filter(function (s) {
+    return s && s.trim(); // 注意：IE9以下的版本没有trim()方法
+});
+r; // ['A', 'B', 'C']
+
+CSS
+1.选择器:
+[attribute]	用于选取带有指定属性的元素。
+[attribute=value]	用于选取带有指定属性和值的元素。
+[attribute~=value]	用于选取属性值中包含指定词汇的元素。
+[attribute|=value]	用于选取带有以指定值开头的属性值的元素，该值必须是整个单词。
+[attribute^=value]	匹配属性值以指定值开头的每个元素。
+[attribute$=value]	匹配属性值以指定值结尾的每个元素。
+[attribute*=value]	匹配属性值中包含指定值的每个元素。
+后代选择器:a b
+规则左边的选择器一端包括两个或多个用空格分隔的选择器。选择器之间的空格是一种结合符.
+两个元素之间的层次间隔可以是无限的。
+子元素选择器:a>b
+相邻兄弟选择器: a + b
+<ul>
+	<li>
+	<li>
+	<li>
+</ul>
+li + li 只会选择第2,3个
+伪类:
+a:link {color: #FF0000}		/* 未访问的链接 */
+a:visited {color: #00FF00}	/* 已访问的链接 */
+a:hover {color: #FF00FF}	/* 鼠标移动到链接上 */
+a:active {color: #0000FF}	/* 选定的链接 */
+
+提示：在 CSS 定义中，a:hover 必须被置于 a:link 和 a:visited 之后，才是有效的。
+提示：在 CSS 定义中，a:active 必须被置于 a:hover 之后，才是有效的。
+提示：伪类名称对大小写不敏感。
+ :first-child 伪类
+伪元素:
+:first-line 伪元素
+:first-letter 伪元素
+:before 伪元素 在元素的内容前面插入新内容。
+:after 伪元素 在元素的内容之后插入新内容。
+属性	描述	CSS
+:first-letter	向文本的第一个字母添加特殊样式。	1
+:first-line	向文本的首行添加特殊样式。	1
+:before	在元素之前添加内容。	2
+:after	在元素之后添加内容。	2
+
+1.可通过将左和右外边距设置为 "auto"，来对齐块元素。
+2.使用 position 属性进行左和右对齐
+对齐元素的方法之一是使用绝对定位：
+实例
+.right
+{
+position:absolute;
+right:0px;
+width:300px;
+background-color:#b0e0e6;
+}
+3.使用 float 属性来进行左和右对齐
+
+height	设置元素的高度。
+line-height	设置行高。
+max-height	设置元素的最大高度。
+max-width	设置元素的最大宽度。
+min-height	设置元素的最小高度。
+min-width	设置元素的最小宽度。
+width	设置元素的宽度。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

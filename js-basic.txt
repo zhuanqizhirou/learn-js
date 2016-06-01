@@ -1,0 +1,63 @@
+js css zepto
+<div class="card-container"  id='card-container1'>
+选择器:
+	$('.card-container[id=card-container1] ')
+	$('#card-container1)
+
+JSON.parse(jsonStr)
+JSON.stringify(object)
+
+	/**
+	 * 深度遍历Object
+	 * @param object
+	 * @param deep
+	 */
+	bianli : function(object, deep) {
+		if(deep==0){
+			console.log('--------开始遍历-------------------------------')
+		}
+		var nt = '';
+		for (var n = 0; n < deep; n++) {
+			nt += '\t';
+		}
+		console.log(nt + '遍历:' + object + ',深度:' + deep);
+		for ( var a in object) {
+			console.log(nt + a + ":\t" + object[a]);
+			if (object[a]) {
+				if (typeof (object[a]) == "object") {
+					tools.bianli(object[a], deep + 1);
+				}
+			}
+		}
+	},
+	
+编码：
++'&color='+escape(tools.skuColor(o.outerSpec))+'&size='
+
+用encodeURI/?Component 最好不用escape??
+
+encodeURI
+https://trade.1688.com/wap/cashier.htm?orderId=1898771069241145&returnUrl=http://distributors.jinpaifenxiao.com/pages/html/order/order_detail.html?id=1898771069241145
+
+encodeURIComponent
+https://trade.1688.com/wap/cashier.htm?orderId=1898771069241145&returnUrl=http%3A%2F%2Fdistributors.jinpaifenxiao.com%2Fpages%2Fhtml%2Forder%2Forder_detail.html%3Fid%3D1898771069241145
+
+
+
+
+
+
+
+
+
+
+{"result":{"count":10,"currentPage":1,"pageSize":10,"relationModels":[{"consignStatus":"normal","consignCreateTime":1463161551170,"supplierLoginId":"亿凡电器厂","supplierCompany":"宁海县亿凡电器厂","lastOrder":0,"lastAmount":0,"distributionNum":1,"memberId":"b2b-2330558720"},{"consignStatus":"normal","consignCreateTime":1463160550079,"supplierLoginId":"永康市杯心日用五金制品厂","supplierCompany":"永康市杯心日用五金制品厂","lastOrder":0,"lastAmount":0,"distributionNum":1,"memberId":"b2b-266310656890127"},{
+
+"consignStatus":"aborting","consignCreateTime":1463018581212,"supplierLoginId":"lichendt","supplierCompany":"山东立晨数据股份有限公司","lastOrder":2,"lastAmount":2,"distributionNum":0,"memberId":"b2b-27128884783ae09"}
+
+
+
+
+
+,{"consignStatus":"normal","consignCreateTime":1462597770482,"supplierLoginId":"薇旭服饰","supplierCompany":"东莞市薇旭服饰有限公司","lastOrder":0,"lastAmount":0,"distributionNum":2,"memberId":"b2b-2547418754y7bwv"},{"consignStatus":"normal","consignCreateTime":1462596304158,"supplierLoginId":"精品毛巾批发","supplierCompany":"兰溪市白俪得针织品店","lastOrder":0,"lastAmount":0,"distributionNum":1,"memberId":"b2b-2327502226"},{"consignStatus":"normal","consignCreateTime":1462433592895,"supplierLoginId":"ycpf2828","supplierCompany":"严路","lastOrder":0,"lastAmount":0,"distributionNum":1,"memberId":"ycpf2828"},{"consignStatus":"normal","consignCreateTime":1462432490479,"supplierLoginId":"义乌公主宝贝饰品","supplierCompany":"义乌市和互电子商务商行","lastOrder":0,"lastAmount":0,"distributionNum":1,"memberId":"b2b-1946187825"},{"consignStatus":"normal","consignCreateTime":1462429706793,"supplierLoginId":"宏帛针织","supplierCompany":"德清武康宏帛针织品商行","lastOrder":0,"lastAmount":0,"distributionNum":1,"memberId":"b2b-2684921489091f3"},{"consignStatus":"normal","consignCreateTime":1462429489377,"supplierLoginId":"fuerxieye","supplierCompany":"杭州福儿鞋业有限公司","lastOrder":0,"lastAmount":0,"distributionNum":1,"memberId":"fuerxieye"},{"consignStatus":"normal","consignCreateTime":1462429430896,"supplierLoginId":"傲薇鞋城","supplierCompany":"上海傲薇服饰有限公司","lastOrder":0,"lastAmount":0,"distributionNum":1,"memberId":"b2b-258784470222953"}]}}
+
